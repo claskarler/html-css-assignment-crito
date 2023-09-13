@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100&family=Inter:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&display=swap");
 html, body {
   color: #191919;
   font-family: "Inter", sans-serif;
@@ -10,21 +11,40 @@ html, body {
   display: flex;
   justify-content: center;
   background-color: #F9D783;
-  border: 1px soild #F9D783;
+  border: 1px solid #F9D783;
   color: #191919;
   text-decoration: none;
-  padding: 13.5px 21.5px;
+  padding: 12px 30px;
   font-weight: 600;
   border-radius: 25px;
   font-size: 16px;
-  width: 122px;
-  height: 48px;
 }
 .btn-yellow i {
-  margin-left: 10px;
+  margin-left: 12px;
   font-size: 0.9em;
 }
 .btn-yellow:hover {
+  background-color: #191919;
+  border: 1px solid #191919;
+  color: white;
+}
+
+.btn-transparent {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #191919;
+  color: #191919;
+  text-decoration: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 25px;
+  font-size: 16px;
+}
+.btn-transparent i {
+  margin-left: 12px;
+  font-size: 0.9em;
+}
+.btn-transparent:hover {
   background-color: #191919;
   border: 1px soild #191919;
   color: white;
@@ -32,7 +52,6 @@ html, body {
 
 header {
   background-color: #F0EFE9;
-  display: flex;
 }
 header .container {
   display: flex;
@@ -146,6 +165,89 @@ header .container .menu .header-menu .nav a.active::after, header .container .me
   transform: translate(calc(50% - 15px));
 }
 
+.showcase {
+  background-color: #F0EFE9;
+}
+.showcase .container {
+  display: flex;
+  justify-content: space-between;
+}
+.showcase .container .content {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.showcase .container .content h1 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 800;
+  font-size: 45px;
+  padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .showcase .container .content h1 {
+    font-size: 70px;
+    padding-bottom: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .showcase .container .content h1 {
+    text-align: start;
+  }
+}
+@media (min-width: 1400px) {
+  .showcase .container .content h1 {
+    font-size: 86px;
+    text-align: start;
+  }
+}
+.showcase .container .content p {
+  font-size: 15px;
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .showcase .container .content p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .showcase .container .content p {
+    text-align: start;
+  }
+}
+.showcase .container .content .links {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .showcase .container .content .links {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  .showcase .container .content .links {
+    justify-content: start;
+  }
+}
+.showcase .container .content .links a {
+  margin-bottom: 15px;
+  margin-right: 16px;
+}
+@media (min-width: 768px) {
+  .showcase .container .content .links a {
+    margin-bottom: 0px;
+  }
+}
+.showcase .container img {
+  display: none;
+  margin-right: -50px;
+}
+@media (min-width: 1200px) {
+  .showcase .container img {
+    display: block;
+  }
+}
+
 footer {
   background-color: #0E1021;
   margin-left: auto;
@@ -155,7 +257,13 @@ footer .footer-top {
   padding-top: 132px;
   padding-bottom: 132px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+@media (min-width: 576px) {
+  footer .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 footer .footer-top .link-container {
   display: flex;
