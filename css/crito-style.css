@@ -1,111 +1,232 @@
-a {
-  all: unset;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100&family=Inter:wght@300;400;500;700;900&display=swap");
+html, body {
+  color: #191919;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn-yellow {
+  display: flex;
+  justify-content: center;
+  background-color: #F9D783;
+  border: 1px soild #F9D783;
+  color: #191919;
+  text-decoration: none;
+  padding: 13.5px 21.5px;
+  font-weight: 600;
+  border-radius: 25px;
+  font-size: 16px;
+  width: 122px;
+  height: 48px;
+}
+.btn-yellow i {
+  margin-left: 10px;
+  font-size: 0.9em;
+}
+.btn-yellow:hover {
+  background-color: #191919;
+  border: 1px soild #191919;
+  color: white;
 }
 
 header {
   background-color: #F0EFE9;
-  padding-left: 300px;
-  padding-right: 300px;
+  display: flex;
+}
+header .container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container #crito-logotype {
+  padding-right: 90px;
+}
+header .container .menu-bars {
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+}
+@media (min-width: 992px) {
+  header .container .menu-bars {
+    display: none;
+  }
+}
+header .container .menu {
+  display: none;
+  flex: 1;
+}
+@media (min-width: 992px) {
+  header .container .menu {
+    display: block;
+  }
+}
+header .container .menu .header-contact {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #DAD9D3;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  header .container .menu .header-contact {
+    justify-content: space-between;
+  }
+}
+header .container .menu .header-contact .contact-info {
+  display: none;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  header .container .menu .header-contact .contact-info {
+    display: flex;
+  }
+}
+header .container .menu .header-contact .contact-info .contact {
+  font-size: 15px;
+  font-weight: 300;
+  padding-right: 30px;
+  margin-right: 20px;
+  border-right: 1px solid #DAD9D3;
+}
+header .container .menu .header-contact .contact-info .contact i {
+  margin-right: 3px;
+  font-size: 1.2em;
+}
+header .container .menu .header-contact .contact-info .contact.last {
+  border: none;
+}
+header .container .menu .header-contact .social-media {
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+}
+header .container .menu .header-contact .social-media .social-media-button {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+header .container .menu .header-contact .social-media .social-media-button:hover {
+  color: #707070;
+}
+header .container .menu .header-contact .social-media .social-media-button:active {
+  color: #434343;
+}
+header .container .menu .header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+header .container .menu .header-menu .nav {
+  display: flex;
+  justify-content: space-between;
+}
+header .container .menu .header-menu .nav a {
+  text-decoration: inherit;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 35px;
+  position: relative;
+  color: inherit;
+}
+header .container .menu .header-menu .nav a.active::after, header .container .menu .header-menu .nav a:hover::after {
+  content: "";
+  position: absolute;
+  font-weight: 500;
+  height: 2px;
+  width: 15px;
+  background-color: #191919;
+  left: 50%;
+  bottom: -3px;
+  transform: translate(calc(50% - 15px));
 }
 
-.footer {
+footer {
   background-color: #0E1021;
+  margin-left: auto;
+  margin-right: auto;
 }
-.footer .footer-top {
+footer .footer-top {
   padding-top: 132px;
   padding-bottom: 132px;
   display: flex;
   justify-content: space-between;
-  margin-left: 300px;
-  margin-right: 300px;
 }
-.footer .footer-top .crito-about .about-text {
-  font-family: "Inter", sans-serif;
+footer .footer-top .link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 213px;
+}
+footer .footer-top .crito-about {
+  width: 309px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .footer-top .crito-about .crit-logo {
+  width: 168px;
+}
+footer .footer-top .crito-about .about-text {
   color: #B6B6BC;
+  height: 125px;
+  line-height: 1.7em;
 }
-.footer .footer-top .company .company-header {
+footer .footer-top .link-header {
   color: white;
   font-family: "DM Sans";
   font-size: 22px;
   font-weight: bold;
+  height: 30px;
 }
-.footer .footer-top .company .company-list {
+footer .footer-top .link-list {
   color: #B6B6BC;
-  font-family: "Inter", sans-serif;
+  height: 141px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.footer .footer-top .help .help-header {
-  color: white;
-  font-family: "DM Sans";
-  font-size: 22px;
-  font-weight: bold;
+footer .footer-top .link {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
 }
-.footer .footer-top .help .help-list {
-  color: #B6B6BC;
-  font-family: "Inter", sans-serif;
-}
-.footer .footer-top .resources .res-header {
-  color: white;
-  font-family: "DM Sans";
-  font-size: 22px;
-  font-weight: bold;
-}
-.footer .footer-top .resources .res-list {
-  color: #B6B6BC;
-  font-family: "Inter", sans-serif;
-}
-.footer .footer-top .link .link-header {
-  color: white;
-  font-family: "DM Sans";
-  font-size: 22px;
-  font-weight: bold;
-}
-.footer .footer-top .link .link-list {
-  color: #B6B6BC;
-  font-family: "Inter", sans-serif;
-}
-.footer .footer-bottom {
+footer .footer-bottom {
   width: 100%;
   border-top: solid 1px #707070;
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
+}
+footer .footer-bottom .container {
+  display: flex;
   justify-content: space-between;
 }
-.footer .footer-bottom .copy {
-  font-family: "Inter", sans-serif;
+footer .footer-bottom .container .copy {
   font-size: 1em;
   color: #B6B6BC;
   width: 475px;
-  margin-left: 300px;
 }
-.footer .footer-bottom .social-media {
+footer .footer-bottom .container .social-media {
   display: flex;
   width: 137.5px;
   color: white;
   justify-content: space-between;
-  margin-right: 300px;
+  font-size: 1.2em;
 }
-.footer .footer-bottom .social-media .social-media-button {
+footer .footer-bottom .container .social-media .social-media-button {
+  color: inherit;
+  text-decoration: inherit;
   cursor: pointer;
 }
-.footer .footer-bottom .social-media #facebook-button:hover {
-  color: rgb(50, 116, 247);
+footer .footer-bottom .container .social-media .social-media-button:hover {
+  color: #707070;
 }
-.footer .footer-bottom .social-media #facebook-button:active {
-  color: rgb(35, 86, 186);
-}
-
-.parent {
-  display: flex;
-  justify-content: space-between;
-}
-.parent .child {
-  display: flex;
-  border: 1px solid black;
-  flex: 1;
-  padding: 10px;
-}
-.parent #child-2 {
-  flex: 2;
-  justify-content: center;
+footer .footer-bottom .container .social-media .social-media-button:active {
+  color: #434343;
 }

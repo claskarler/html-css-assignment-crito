@@ -1,86 +1,207 @@
 
-a {
-    all: unset;
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100&family=Inter:wght@300;400;500;700;900&display=swap');
+
+html, body {
+    color:#191919;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 
+.btn-yellow {
+    display: flex;
+    justify-content: center;
+    background-color: #F9D783;
+    border: 1px soild #F9D783;
+    color: #191919;
+    text-decoration: none;
+    padding: 13.5px 21.5px;
+    font-weight: 600;
+    border-radius: 25px;
+    font-size: 16px;
+    width: 122px;
+    height:48px;
+
+    i {
+        margin-left: 10px;
+        font-size: 0.9em;
+    }
+
+    &:hover {
+        background-color:#191919;
+        border: 1px soild#191919;
+        color: white;
+    }
+}
 
 header {
-    background-color: #F0EFE9;
-    padding-left: 300px;
-    padding-right: 300px;
-}
-.footer{ 
+    background-color:#F0EFE9;
+    display: flex;
+    .container {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: space-between;
+
+        #crito-logotype {
+            padding-right: 90px;
+        }
+
+        .menu-bars {
+            font-size: 25px;
+            border:none;
+            background-color: transparent;
+
+            @media (min-width:992px) {
+                display: none;
+            }
+        }
+        .menu {
+            display:none;
+            flex: 1;
+            @media (min-width:992px) {
+                display: block;
+            }
+            .header-contact {
+                display: flex;
+                justify-content: flex-end;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                border-bottom: 1px solid #DAD9D3;
+                align-items: center;
+                @media (min-width:1200px) {
+                    justify-content: space-between;
+                }
+                .contact-info {
+                    display: none;
+                    align-items: center;
+                    @media (min-width:1200px) {
+                        display: flex;
+                    }
+
+                    .contact {
+                        font-size: 15px;
+                        font-weight: 300;
+                        padding-right: 30px;
+                        margin-right: 20px;
+                        border-right: 1px solid #DAD9D3;
+                        i {
+                            margin-right: 3px;
+                            font-size: 1.2em;
+                        }
+                        &.last {
+                            border: none;
+                        }
+                    }
+                }
+                .social-media {
+                    display:flex;
+                    width:120px;
+                    justify-content: space-between;
+                    .social-media-button {
+                        color: inherit; 
+                        text-decoration: inherit;
+                        cursor: pointer;
+                        font-size: 1.2em;
+                        &:hover {
+                            color:#707070;
+                        }
+                        &:active {
+                            color: #434343
+                        }
+                    }
+                }
+            }
+            .header-menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 20px;
+                .nav {
+                    display: flex;
+                    justify-content: space-between;
+                    a {
+                        text-decoration: inherit;
+                        cursor: pointer;
+                        display:inline-block;
+                        margin-right: 35px;
+                        position:relative;
+                        color:inherit;
+                        &.active::after,
+                        &:hover::after {
+                            content: '';
+                            position: absolute;
+                            font-weight: 500;
+                            height: 2px;
+                            width: 15px;
+                            background-color: #191919;
+                            left: 50%;
+                            bottom: -3px;
+                            transform: translate((calc(50% - 15px)));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}    
+
+footer{ 
     background-color: #0E1021; 
-    
+    margin-left: auto;
+    margin-right: auto;
 
     .footer-top {
         padding-top: 132px;
         padding-bottom: 132px;
         display: flex;
         justify-content: space-between;
-        margin-left: 300px;
-        margin-right: 300px;
+
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 213px;
+        }
 
         .crito-about {
+            width: 309px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .crit-logo {
+                width: 168px;
+            }
+
             .about-text {
-                font-family: 'Inter', sans-serif;
-                color: #B6B6BC
+                color: #B6B6BC;
+                height: 125px;
+                line-height: 1.7em;
             }
         }
 
-        .company {
-            .company-header {
-                color: white;
-                font-family: 'DM Sans';
-                font-size: 22px;
-                font-weight: bold;
-            }
-            .company-list {
-                color:#B6B6BC;
-                font-family: 'Inter', sans-serif;
-            }
-        } 
-
-        .help {
-                .help-header {
-                    color: white;
-                    font-family: 'DM Sans';
-                    font-size: 22px;
-                    font-weight: bold;
-                }
-                .help-list {
-                    color:#B6B6BC;
-                    font-family: 'Inter', sans-serif;
-                }
+        .link-header {
+            color: white;
+            font-family: 'DM Sans';
+            font-size: 22px;
+            font-weight: bold;
+            height: 30px;
         }
-        .resources {
-            .res-header {
-                color: white;
-                font-family: 'DM Sans';
-                font-size: 22px;
-                font-weight: bold;
-            }
-            .res-list {
-                color:#B6B6BC;
-                font-family: 'Inter', sans-serif;
-            }
-
+        .link-list {
+            color:#B6B6BC;
+            height: 141px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .link {
-            .link-header {
-                color: white;
-                font-family: 'DM Sans';
-                font-size: 22px;
-                font-weight: bold;
-            }
-            .link-list {
-                color:#B6B6BC;
-                font-family: 'Inter', sans-serif;
-            }
-    
+            color: inherit; 
+            text-decoration: inherit;
+            cursor: pointer;
         }
-        
     }
 
     .footer-bottom {
@@ -89,45 +210,32 @@ header {
         padding-top: 20px;
         padding-bottom: 20px;
         display: flex;
-        justify-content: space-between;
-        .copy {
-            font-family: 'Inter', sans-serif;
-            font-size: 1em;
-            color: #B6B6BC;
-            width:475px;
-            margin-left: 300px;
-        }
-        .social-media {
-            display:flex;
-            width:137.5px;
-            color: white;
+        .container {
+            display: flex;
             justify-content: space-between;
-            margin-right: 300px;
-            .social-media-button {
-                cursor:pointer;
+            .copy {
+                font-size: 1em;
+                color: #B6B6BC;
+                width:475px;
             }
-            #facebook-button:hover {
-                color:rgb(50, 116, 247);
-            }
-            #facebook-button:active {
-                color:rgb(35, 86, 186);
+            .social-media {
+                display:flex;
+                width:137.5px;
+                color: white;
+                justify-content: space-between;
+                font-size: 1.2em;
+                .social-media-button {
+                    color: inherit; 
+                    text-decoration: inherit;
+                    cursor: pointer;
+                    &:hover {
+                        color:#707070;
+                    }
+                    &:active {
+                        color: #434343
+                    }
+                }
             }
         }
     }
 }
-
-.parent {
-    display: flex;
-    justify-content: space-between;
-  
-    .child {
-      display: flex;
-      border: 1px solid black;
-      flex: 1;
-      padding: 10px;
-    }
-    #child-2 {
-        flex: 2;
-        justify-content: center;
-    }
-  }
