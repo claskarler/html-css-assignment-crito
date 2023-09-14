@@ -248,6 +248,29 @@ header .container .menu .header-menu .nav a.active::after, header .container .me
   }
 }
 
+.brands .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding-top: 22px;
+  padding-bottom: 26px;
+}
+@media (min-width: 768px) {
+  .brands .container {
+    padding-top: 32px;
+    padding-bottom: 42px;
+  }
+}
+@media (min-width: 1200px) {
+  .brands .container {
+    padding-top: 72px;
+    padding-bottom: 82px;
+  }
+}
+.brands .container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 footer {
   background-color: #0E1021;
   margin-left: auto;
