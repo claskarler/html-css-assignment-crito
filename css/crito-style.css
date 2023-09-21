@@ -81,6 +81,29 @@ html h3, body h3 {
   color: #191919;
 }
 
+.btn-circular {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+}
+.btn-circular i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #191919;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+}
+.btn-circular i:hover {
+  background-color: white;
+  color: #191919;
+}
+
 .section-title {
   padding-top: 70px;
   padding-bottom: 35px;
@@ -331,12 +354,23 @@ header .container .menu .header-menu .nav a.active::after, header .container .me
 @media (min-width: 992px) {
   .about-company .container {
     flex-direction: row;
-    max-height: 615px;
   }
 }
 .about-company .container .founder-section {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
+  margin-bottom: 40px;
+}
+.about-company .container .founder-section img {
+  display: none;
+}
+@media (min-width: 768px) {
+  .about-company .container .founder-section img {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 .about-company .container .founder-section .about-founder {
   position: relative;
@@ -345,8 +379,6 @@ header .container .menu .header-menu .nav a.active::after, header .container .me
   padding-left: 24px;
   padding-right: 24px;
   background-color: #BEEBFF;
-  height: 150px;
-  bottom: 150px;
 }
 @media (min-width: 768px) {
   .about-company .container .founder-section .about-founder {
@@ -365,6 +397,7 @@ header .container .menu .header-menu .nav a.active::after, header .container .me
   font-size: 16px;
 }
 .about-company .container .about-company-text {
+  max-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -401,23 +434,33 @@ header .container .menu .header-menu .nav a.active::after, header .container .me
 .about-company .container .about-company-text .section-title p {
   padding-bottom: 0px;
 }
+.about-company .container .about-company-text .learn-video {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 1200px) {
+  .about-company .container .about-company-text .learn-video {
+    justify-content: start;
+  }
+}
 .about-company .container .about-company-text .learn-video .play-video {
-  display: inline-block;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 @media (min-width: 1200px) {
   .about-company .container .about-company-text .learn-video .play-video {
+    justify-content: left;
     margin-left: 40px;
   }
 }
-.about-company .container .about-company-text .learn-video .play-video .btn-video {
+.about-company .container .about-company-text .learn-video .play-video .btn-play {
   display: flex;
-  color: inherit;
+  color: #191919;
   text-decoration: none;
+  font-weight: 600;
   justify-content: center;
   align-items: center;
 }
-.about-company .container .about-company-text .learn-video .play-video .btn-video i {
+.about-company .container .about-company-text .learn-video .play-video .btn-play i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -426,6 +469,73 @@ header .container .menu .header-menu .nav a.active::after, header .container .me
   height: 50px;
   width: 50px;
   margin-right: 15px;
+}
+.about-company .container .about-company-text .learn-video .play-video .btn-play:hover i {
+  background-color: #191919;
+  border: 1px soild #191919;
+  color: white;
+}
+
+.services {
+  background-color: #F0EFE9;
+}
+.services .container {
+  padding-bottom: 120px;
+}
+.services .container .section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .services .container .section-title {
+    text-align: start;
+    width: 500px;
+  }
+}
+.services .container .service-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .services .container .service-links {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1400px) {
+  .services .container .service-links {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.services .container .service-links .service-link {
+  color: inherit;
+  text-decoration: none;
+  background-color: white;
+}
+.services .container .service-links .service-link:hover {
+  background-color: #F9D783;
+}
+.services .container .service-links .service-link:hover i {
+  background-color: white;
+  color: #191919;
+}
+.services .container .service-links .service-link .link-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-right: 25px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+.services .container .service-links .service-link .link-content .btn-circular {
+  justify-content: end;
+}
+.services .container .browse-services {
+  text-align: center;
+}
+.services .container .browse-services .btn-transparent {
+  display: inline-block;
 }
 
 .project-case .container .section-title {

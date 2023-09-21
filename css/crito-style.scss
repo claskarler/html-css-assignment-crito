@@ -85,6 +85,28 @@ html, body {
         color: #191919;
     }
 }
+.btn-circular {
+    display: flex;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #191919;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin-right: 15px;
+        &:hover {
+            background-color: #ffff;
+            color: #191919;
+        }
+    }
+}
 
 .section-title {
     padding-top: 70px;
@@ -312,11 +334,20 @@ header {
         flex-direction: column;
          @media (min-width:992px) {
             flex-direction: row;
-            max-height: 615px;
          }
         .founder-section {
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 40px;
+            margin-bottom: 40px;
+            img {
+                display: none;
+                @media (min-width:768px) {
+                    display: block;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                }
+            }
             .about-founder {
                 position: relative;
                 padding-top: 35px;
@@ -324,8 +355,6 @@ header {
                 padding-left: 24px;
                 padding-right: 24px;
                 background-color: #BEEBFF;
-                height: 150px;
-                bottom: 150px;
                 
                 @media (min-width:768px) {
                     height: 185px;
@@ -345,6 +374,7 @@ header {
             }
         }
         .about-company-text {
+            max-height: 600px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -373,16 +403,22 @@ header {
                 }
             }
             .learn-video {
+                display: flex;
+                justify-content: center;
+                @media (min-width:1200px) {
+                    justify-content: start;
+                }
                 .play-video {
-                    display: inline-block;
-                    margin-left: 20px;
+                    margin-left: 10px;
                     @media (min-width:1200px) {
+                        justify-content: left;
                         margin-left: 40px;
                     }
-                    .btn-video{
+                    .btn-play {
                         display: flex;
-                        color: inherit;
+                        color: #191919;
                         text-decoration: none;
+                        font-weight: 600;
                         justify-content: center;
                         align-items: center;
                         i{
@@ -395,8 +431,72 @@ header {
                             width: 50px;
                             margin-right: 15px;
                         }
+                        &:hover {
+                            i {
+                                background-color: #191919;
+                                border: 1px soild#191919;
+                                color: #ffff;
+                            }
+                        }
                     }
                 }
+            }
+        }
+    }
+}
+
+.services {
+    background-color: #F0EFE9;
+    .container {
+        padding-bottom: 120px;
+        .section-title {
+            text-align: center;
+            padding-bottom: 30px;
+            @media (min-width:992px) {
+                text-align: start;
+                width:500px;
+            }
+        }
+        .service-links {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+            @media (min-width:768px) {
+                grid-template-columns: 1fr 1fr;
+            }
+            @media (min-width:1400px) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            .service-link {
+                color: inherit;
+                text-decoration: none;
+                background-color: #FFFF;
+                &:hover {
+                    background-color: #F9D783;
+                    i {
+                        background-color: #ffff;
+                        color:#191919
+                    }
+                }
+                .link-content {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 30px;
+                    margin-right: 25px;
+                    margin-top: 45px;
+                    margin-bottom: 45px;
+                    .btn-circular {
+                        justify-content: end;
+                    }
+                }
+                
+            }
+        }
+        .browse-services {
+            text-align: center;
+            .btn-transparent {
+                display: inline-block;
             }
         }
     }
