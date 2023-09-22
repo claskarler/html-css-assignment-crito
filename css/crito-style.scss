@@ -244,6 +244,19 @@ header {
 
 .showcase {
     background-color: #F0EFE9;
+    position: relative;
+    z-index: 0;
+    .background-lines {
+        display: none;
+        position: absolute;
+        bottom:0;
+        left: 0;
+        z-index: -1;
+
+        @media (min-width:1200px){
+            display: block;
+        }
+    }
     .container {
         display: flex;
         justify-content: space-between;
@@ -327,6 +340,13 @@ header {
         }
     }
 }
+
+.features {
+    .container {
+        background-color: hotpink;
+    }
+}
+
 
 .about-company {
     .container {
@@ -553,10 +573,88 @@ header {
 
 }
 
+.article-news {
+    .container {
+        .article-news-header {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+.newsletter-signup {
+    background-color: #F0EFE9;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    z-index: 0;
+    .background-wavy-lines {
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+        display: none;
+        z-index: -1;
+        @media (min-width:1400px) {
+            display: block;
+        }
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        @media (min-width: 1200px) {
+            flex-direction: row;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 45px;
+            text-align: center;
+            padding-bottom: 25px;
+            @media (min-width: 1200px) {
+                text-align: start;
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            @media (min-width: 1200px) {
+                flex-direction: row;
+            }
+            input {
+                padding: 12px 30px;
+                border-radius: 25px;
+                outline: none;
+                border: 1px solid #DAD9D3;
+                margin-right: 0px;
+                margin-bottom: 10px;
+                @media (min-width: 1200px) {
+                    margin-right: 20px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
 footer{ 
     background-color: #0E1021; 
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    z-index: 0;
+    .background-lines-white-right {
+        position: absolute;
+        bottom: 65px;
+        right: 0;
+        z-index: -1;
+        display: none;
+        @media (min-width:992px) {
+            display: block;
+        }
+    }
 
     .footer-top {
         padding-top: 132px;
