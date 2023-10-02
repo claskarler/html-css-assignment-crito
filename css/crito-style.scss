@@ -13,6 +13,15 @@ body {
         font-weight: 700;
         font-family: "DM Sans", sans-serif;
     }
+    
+    input {
+        padding: 12px 30px;
+        border-radius: 25px;
+        outline: none;
+        border: 1px solid #dad9d3;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
 }
 
 .social-media {
@@ -235,6 +244,7 @@ body {
     }
 
 }
+
 
 header {
     background-color: #f0efe9;
@@ -1246,18 +1256,10 @@ header {
             @media (min-width: 1200px) {
                 flex-direction: row;
             }
-
-            input {
-                padding: 12px 30px;
-                border-radius: 25px;
-                outline: none;
-                border: 1px solid #dad9d3;
-                margin-right: 0px;
-                margin-bottom: 10px;
-
-                @media (min-width: 1200px) {
-                    margin-right: 20px;
-                    margin-bottom: 0px;
+            @media (min-width: 1200px) {
+                .input {
+                margin-right: 20px;
+                margin-bottom: 0px;
                 }
             }
         }
