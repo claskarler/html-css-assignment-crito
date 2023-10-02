@@ -530,11 +530,13 @@ header {
             .feature {
                 text-align: center;
                 padding-top: 30px;
+                padding-bottom: 10px;
                 padding-right: 20px;
                 border-top: 1px solid #b6b6bc;
                 @media (min-width:992px) {
                     text-align: start;
                     border:none;
+                    padding-bottom: 0px;
                 }
                 i {
                     font-size: 30px;
@@ -644,12 +646,17 @@ header {
 
                 @media (min-width: 360px) {
                     flex-direction: row;
+                    .btn-black {
+                        margin-bottom: 0px;
+                    }
                 }
 
                 @media (min-width: 1200px) {
                     justify-content: start;
                 }
-
+                .btn-black {
+                    margin-bottom: 20px;
+                }
                 .play-video {
                     margin-left: 10px;
 
@@ -704,7 +711,10 @@ header {
         }
 
         .section-title {
-            padding-bottom: 20px;
+            padding-bottom: 35px;
+            @media (min-width: 992px) {
+                padding-bottom: 20px;
+            }
         }
 
         .service-links {
@@ -1008,6 +1018,85 @@ header {
 
 .testimonial {
     background-color: #EDCF86;
+    padding-bottom: 120px;
+    .big-container {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            @media (min-width:1200px) {
+                padding-top: 120px;
+                padding-bottom: 120px;
+            }
+            .section-title {
+                text-align: center;
+                padding-bottom: 20px;
+                @media (min-width:1200px) {
+                    padding-bottom:40px;
+                }
+            }
+            .testimonial-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                column-gap: 120px;
+
+                @media (min-width:1200px) {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+                
+                .client-testimonial {
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    border-bottom: 1px solid #b6b6bc;
+                        @media (min-width:1200px) {
+                            border: none;
+                            padding-top: 0px;
+                        }
+                    .rating-text {
+                        font-size: 18px;
+                        line-height: 2em;
+                    }
+                    .rating {
+                        padding-bottom: 20px;
+                        i {
+                            color: #f94d1c;
+                        }
+                    }
+                    .client-info {
+                        display: flex;
+                        margin-top: 20px;
+
+                        .info-text {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                        }
+                        img {
+                            display: none;
+                            padding-right: 20px;
+                            width: auto;
+                            height: 100%;
+
+                            @media (min-width:350px) {
+                                display: block;
+                            }
+                        }
+                        p {
+                            color: #f94d1c;
+                            margin: 0px;
+                        }
+                    }
+                }
+            }
+            a {
+                margin-top: 90px;
+            }
+        }
+    }
 }
 
 .article-news {
@@ -1019,11 +1108,17 @@ header {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            padding-top: 75px;
+            padding-top: 80px;
+            .btn-transparent {
+                margin-bottom: 35px;
+            }
 
             @media (min-width: 992px) {
                 flex-direction: row;
                 padding-top: 120px;
+                .btn-transparent {
+                    margin-bottom: 0px;
+                }
             }
         }
 
