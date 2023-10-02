@@ -153,6 +153,33 @@ body h3 {
   text-decoration: none;
   color: inherit;
 }
+.article .image-date {
+  position: relative;
+}
+.article .image-date .date-box {
+  position: absolute;
+  text-align: center;
+  padding: 20px 20px;
+  background-color: #EDCF86;
+  line-height: 11px;
+  top: 20px;
+  left: 20px;
+}
+.article .image-date .date-box h3 {
+  margin: 0px 0px;
+  font-size: 30px;
+}
+.article .image-date .date-box p {
+  margin: 0px 0px;
+}
+@media (min-width: 1400px) {
+  .article .image-date .date-box {
+    padding: 15px 15px;
+  }
+  .article .image-date .date-box h3 {
+    font-size: 22px;
+  }
+}
 .article img {
   width: 100%;
   height: auto;
@@ -555,6 +582,12 @@ header .container .menu .header-menu .nav a.active::after, header .container .me
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
+  position: relative;
+}
+.about-company .container .founder-section .background-lines {
+  position: absolute;
+  top: 30px;
+  left: -35px;
 }
 .about-company .container .founder-section img {
   display: none;
@@ -688,6 +721,18 @@ header .container .menu .header-menu .nav a.active::after, header .container .me
 
 .services {
   background-color: #f0efe9;
+  position: relative;
+}
+.services img {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+@media (min-width: 992px) {
+  .services img {
+    display: block;
+  }
 }
 .services .container {
   padding-top: 60px;
@@ -1135,7 +1180,7 @@ header .container .menu .header-menu .nav a.active::after, header .container .me
   height: auto;
   margin-bottom: 25px;
 }
-.article-news .container .article-grid .article:hover h3 {
+.article-news .container .article-grid .article .article-text:hover h3 {
   text-decoration: underline;
 }
 
