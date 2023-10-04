@@ -50,13 +50,22 @@
 .message .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-top: 120px;
   padding-bottom: 120px;
+}
+.message .container .section-title {
+  text-align: center;
 }
 .message .container .message-input form {
   display: flex;
   flex-direction: column;
+}
+.message .container .message-input form input {
+  margin-bottom: 10px;
+}
+.message .container .message-input form .btn-yellow {
+  margin-top: 30px;
+  text-align: center;
 }
 
 .map img {

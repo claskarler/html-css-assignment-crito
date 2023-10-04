@@ -19,8 +19,7 @@ body {
         border-radius: 25px;
         outline: none;
         border: 1px solid #dad9d3;
-        margin-right: 0px;
-        margin-bottom: 10px;
+        
     }
 }
 
@@ -33,6 +32,7 @@ body {
         color: inherit;
         text-decoration: inherit;
         padding-right: 20px;
+        transition: color 0.15s ease-in-out;
     }
 }
 
@@ -45,6 +45,7 @@ body {
     font-weight: 600;
     border-radius: 25px;
     font-size: 16px;
+    transition: background-color 0.2s ease-in-out, color 0.3s ease-in-out;
 
     span {
         font-weight: 400;
@@ -70,6 +71,7 @@ body {
     font-weight: 600;
     border-radius: 25px;
     font-size: 16px;
+    transition: background-color 0.2s ease-in-out, color 0.3s ease-in-out;
 
     span {
         font-weight: 400;
@@ -96,6 +98,7 @@ body {
     font-weight: 600;
     border-radius: 25px;
     font-size: 16px;
+    transition: background-color 0.2s ease-in-out, color 0.3s ease-in-out;
 
     span {
         font-weight: 400;
@@ -342,6 +345,7 @@ header {
                 .nav {
                     display: flex;
                     justify-content: space-between;
+                    
 
                     a {
                         text-decoration: inherit;
@@ -350,6 +354,7 @@ header {
                         margin-right: 35px;
                         position: relative;
                         color: inherit;
+                        
 
                         &.active::after,
                         &:hover::after {
@@ -626,6 +631,7 @@ header {
                     width: 368px;
                     right: 56px;
                     bottom: 220px;
+                    box-shadow: -10px 10px 20px 2px #0000001e;
                 }
 
                 h3 {
@@ -722,6 +728,7 @@ header {
                             height: 50px;
                             width: 50px;
                             margin-right: 15px;
+                            transition: background-color 0.2s ease-in-out, color 0.3s ease-in-out;
                         }
 
                         &:hover {
@@ -785,11 +792,13 @@ header {
                 color: inherit;
                 text-decoration: none;
                 background-color: #ffff;
+                transition: background-color 0.2s ease-in-out;
 
                 &:hover {
                     background-color: #f9d783;
 
                     i {
+                        transition: background-color 0.3s ease-in-out, color 0.4s ease-in-out;
                         background-color: #ffff;
                         color: #191919;
                     }
@@ -1255,11 +1264,8 @@ header {
 
             @media (min-width: 1200px) {
                 flex-direction: row;
-            }
-            @media (min-width: 1200px) {
-                .input {
+                input {
                 margin-right: 20px;
-                margin-bottom: 0px;
                 }
             }
         }
