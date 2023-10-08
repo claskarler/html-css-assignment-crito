@@ -29,7 +29,7 @@
   color: inherit;
   margin-left: 10px;
 }
-.contact-showcase .container .content a.active, .contact-showcase .container .content a:hover {
+.contact-showcase .container .content a.active {
   font-weight: 500;
 }
 .contact-showcase .container .content h1 {
@@ -44,17 +44,81 @@
   }
 }
 
+.contact-info .container {
+  margin-top: 50px;
+}
+@media (min-width: 776px) {
+  .contact-info .container {
+    margin-top: 100px;
+  }
+}
+.contact-info .container .contact-boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+}
+@media (min-width: 1200px) {
+  .contact-info .container .contact-boxes {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.contact-info .container .contact-boxes .contact-box {
+  border: 1px solid #D1D1D1;
+  padding: 25px 20px;
+  display: flex;
+}
+@media (min-width: 776px) {
+  .contact-info .container .contact-boxes .contact-box {
+    padding: 45px 60px;
+  }
+}
+.contact-info .container .contact-boxes .contact-box .btn-circular {
+  align-items: start;
+}
+.contact-info .container .contact-boxes .contact-box .btn-circular i:hover {
+  color: #ffffff;
+  background-color: #191919;
+}
+.contact-info .container .contact-boxes .contact-box .contact-text h3 {
+  margin-bottom: 15px;
+}
+.contact-info .container .contact-boxes .contact-box .contact-text p {
+  margin-bottom: 0px;
+}
+
 .message {
-  background-color: #f0efe9;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media (min-width: 776px) {
+  .message {
+    padding-top: 75px;
+    padding-bottom: 100px;
+  }
 }
 .message .container {
+  background-color: #f0efe9;
   display: flex;
   flex-direction: column;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 50px 20px;
+}
+@media (min-width: 992px) {
+  .message .container {
+    padding: 120px 120px;
+  }
 }
 .message .container .section-title {
   text-align: center;
+}
+.message .container .section-title h2 {
+  font-size: 30px;
+}
+@media (min-width: 992px) {
+  .message .container .section-title h2 {
+    font-size: 45px;
+  }
 }
 .message .container .message-input form {
   display: flex;
@@ -63,6 +127,9 @@
 .message .container .message-input form input {
   margin-bottom: 10px;
 }
+.message .container .message-input form input.text {
+  padding-bottom: 120px;
+}
 .message .container .message-input form .btn-yellow {
   margin-top: 30px;
   text-align: center;
@@ -70,4 +137,10 @@
 
 .map img {
   width: 100%;
+  display: none;
+}
+@media (min-width: 776px) {
+  .map img {
+    display: block;
+  }
 }
