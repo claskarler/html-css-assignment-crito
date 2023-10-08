@@ -120,6 +120,12 @@
     font-size: 45px;
   }
 }
+@media (min-width: 1400px) {
+  .message .container .section-title h2 {
+    padding-left: 325px;
+    padding-right: 325px;
+  }
+}
 .message .container .message-input form {
   display: flex;
   flex-direction: column;
